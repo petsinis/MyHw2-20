@@ -1,0 +1,2 @@
+g++.exe -Wall -fexceptions -g -O3 A.cpp MyLinkedList2.cpp DoubleLinkedList2.cpp -o A && ./A
+g++.exe -Wall -fexceptions -g -O3 B.cpp MyLinkedList2.cpp DoubleLinkedList2.cpp -o B && ./B

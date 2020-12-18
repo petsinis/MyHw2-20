@@ -1,0 +1,25 @@
+javac A.java MyLinkedList2.java DoubleLinkedList2.java && java -Xmx6G -Xms6G A
+javac B.java MyLinkedList2.java DoubleLinkedList2.java && java -Xmx6G -Xms6G B
+
+
+javac RatioGenaration.java MyLinkedList2.java DoubleLinkedList2.java && java -Xmx6G -Xms6G -XX:NewRatio=1 RatioGenaration
+javac RatioGenaration.java MyLinkedList2.java DoubleLinkedList2.java && java -Xmx6G -Xms6G -XX:NewRatio=2 RatioGenaration
+javac RatioGenaration.java MyLinkedList2.java DoubleLinkedList2.java && java -Xmx6G -Xms6G -XX:NewRatio=4 RatioGenaration
+javac RatioGenaration.java MyLinkedList2.java DoubleLinkedList2.java && java -Xmx6G -Xms6G -XX:NewRatio=8 RatioGenaration
+javac RatioGenaration.java MyLinkedList2.java DoubleLinkedList2.java && java -Xmx6G -Xms6G -XX:NewRatio=16 RatioGenaration
+javac RatioGenaration.java MyLinkedList2.java DoubleLinkedList2.java && java -Xmx6G -Xms6G -XX:NewRatio=32 RatioGenaration
+javac RatioGenaration.java MyLinkedList2.java DoubleLinkedList2.java && java -Xmx6G -Xms6G -XX:NewRatio=64 RatioGenaration
+
+
+
+javac ParallelNonParallel.java MyLinkedList2.java DoubleLinkedList2.java && java -Xmx6G -Xms6G -XX:NewRatio=64 -XX:-UseSerialGC ParallelNonParallel
+javac ParallelNonParallel.java MyLinkedList2.java DoubleLinkedList2.java && java -Xmx6G -Xms6G -XX:NewRatio=64 -XX:-UseParallelGC ParallelNonParallel
+
+
+
+javac ParallelThreads.java MyLinkedList2.java DoubleLinkedList2.java && java -Xmx6G -Xms6G -XX:NewRatio=64 -XX:-UseParallelGC -XX:ParallelGCThreads=1 ParallelThreads.java
+javac ParallelThreads.java MyLinkedList2.java DoubleLinkedList2.java && java -Xmx6G -Xms6G -XX:NewRatio=64 -XX:-UseParallelGC -XX:ParallelGCThreads=2 ParallelThreads.java 
+javac ParallelThreads.java MyLinkedList2.java DoubleLinkedList2.java && java -Xmx6G -Xms6G -XX:NewRatio=64 -XX:-UseParallelGC -XX:ParallelGCThreads=4 ParallelThreads.java 
+javac ParallelThreads.java MyLinkedList2.java DoubleLinkedList2.java && java -Xmx6G -Xms6G -XX:NewRatio=64 -XX:-UseParallelGC -XX:ParallelGCThreads=8 ParallelThreads.java  
+
+
